@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Groupe Form{% endblock %}
+
+{% block body %}
+
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+<br>
+    <button class="btn btn-success">{{ button_label|default('Add Groupe') }}</button>
+{{ form_end(form) }}
+
+{% endblock %}

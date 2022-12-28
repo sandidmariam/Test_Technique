@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GroupeHotelier{% endblock %}
+
+{% block body %}
+    <br>
+    <h1 class="center">GroupeHotelier</h1>
+    <br><br>
+    <table class="table table-striped" style="width: 700px;margin-left: 25%">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Nom</th>
+        <th>Description</th>
+        <th>Action</th>
+
+    </tr>
+    </thead>
+
+        <tbody>
+
+
+                <td>{{ groupe_hotelier.id }}</td>
+
+
+                <td>{{ groupe_hotelier.nom }}</td>
+
+
+                <td>{{ groupe_hotelier.Description }}</td>
+                <td> <a href="{{ path('app_groupe_hotelier_index') }}">back</a>
+
+                    <a href="{{ path('app_groupe_hotelier_edit', {'id': groupe_hotelier.id}) }}"><img src="{{ asset('/assets/edit.png') }}" style="width: 35px;height: 35px"></a>
+
+                    {{ include('groupe_hotelier/_delete_form.html.twig') }}
+                </td>
+
+        </tbody>
+    </table>
+
+
+{% endblock %}
